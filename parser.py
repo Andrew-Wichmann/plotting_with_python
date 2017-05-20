@@ -12,14 +12,8 @@ def parse_file(fd):
 
     for line in lines :
         line = strip_and_split(line)
-        for variable in range(0, len(return_list)) :
-            return_list[variable].addItem(int(line[variable]))
-    
-
-
-    for variable in range(0, len(return_list)) :
-        print return_list[variable].title
-        print return_list[variable].mylist
+        for idx, struct in enumerate(return_list) :
+            struct.addItem(int(line[idx]))
     
     return return_list
 
